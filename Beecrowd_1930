@@ -1,0 +1,8 @@
+
+#INICIANDO UM VETOR vetor = [0,0,0,0]
+tomadas=0
+
+
+tomadas = [int(x) for x in input().strip().split(' ')]#Criei um vetor de alocacao dinamica1
+
+print(f"{sum(tomadas)-3}")
