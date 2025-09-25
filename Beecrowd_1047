@@ -1,0 +1,21 @@
+lista = [int(x) for x in input().strip().split(' ')]
+#Ordem: hora e minuto inicial, hora  e minuto inicial
+hInicial = lista[0]
+mInicial = lista[1]
+hFinal = lista[2]
+mFinal = lista[3]
+
+mTotalInicial = hInicial*60 + mInicial
+mTotalFinal = hFinal*60 + mFinal
+
+diferenca = mTotalFinal - mTotalInicial# 
+if diferenca <= 0:#Se for negativo soma 24h e retira do valor maximo
+    diferenca +=1440
+"""
+CASO O PRAZO MAXIMO NN FOSSE DE 24H
+if hInicial==hFinal:#Se o horario for o mesmo significa que passou-se 24h, logo 1440 minutos
+    diferenca = diferenca + 1440
+"""
+
+print(f"O JOGO DUROU {int(diferenca/60)} HORA(S) E {diferenca%60} MINUTO(S)")
+
