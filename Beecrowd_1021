@@ -1,0 +1,71 @@
+valor = float(input())
+
+#Exemplo de 576.65
+resto=valor
+print("NOTAS:")
+notas = int(valor / 100)#5
+print(f"{notas} nota(s) de R$ 100.00")
+resto = valor % 100#76.65
+valor = resto
+
+notas = int(resto/50)#1
+print(f"{notas} nota(s) de R$ 50.00")
+resto = valor%50#26.65
+valor = resto
+
+notas = int(resto/20)#1
+print(f"{notas} nota(s) de R$ 20.00")
+resto = valor%20#6.65
+valor = resto
+
+notas = int(resto/10)#0
+print(f"{notas} nota(s) de R$ 10.00")
+resto = valor%10#6.65
+valor = resto
+
+notas = int(resto/5)#1
+print(f"{notas} nota(s) de R$ 5.00")
+resto = valor%5#1.65
+valor=resto
+#Aqui ele sai do loop
+notas=int(resto/2)#0
+print(f"{notas} nota(s) de R$ 2.00")
+resto = valor%2#1.65
+valor=resto
+
+#print("sai do loop1")
+print("MOEDAS:")
+moedas=0
+if valor>0:
+    valor=valor*100
+moedas = int(valor/100)#165
+print(f"{moedas} moeda(s) de R$ 1.00")
+resto = valor%100#65
+valor = resto
+
+moedas = int(resto/50)#1
+print(f"{moedas} moeda(s) de R$ 0.50")
+resto = valor%50#15
+valor = resto
+
+moedas = int(resto/25)#0
+print(f"{moedas} moeda(s) de R$ 0.25")
+resto = valor%25#15
+valor = resto
+
+moedas = int(resto/10)#1
+print(f"{moedas} moeda(s) de R$ 0.10")
+resto = valor%10#5
+valor = resto
+
+moedas = int(resto/5)#1
+print(f"{moedas} moeda(s) de R$ 0.05")
+resto = valor%5#0
+valor = resto
+
+moedas = int(resto/1)#0
+print(f"{moedas} moeda(s) de R$ 0.01")
+resto=valor%1#0
+valor = resto
+
+#print("Sai do if 2")
